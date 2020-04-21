@@ -54,3 +54,5 @@ RUN apk add --no-cache \
         bash shadow
 
 RUN stack config set system-ghc --global true
+
+RUN apk add zlib-static --no-cache
