@@ -18,7 +18,10 @@ RUN apk upgrade --no-cache &&\
         libffi-dev \
         musl-dev \
         ncurses-dev \
-        zlib-dev
+        zlib-dev \
+        zlib-static \
+        bash \
+        shadow # for stack --docker, provides groupadd
 
 RUN curl -sSLo /usr/local/bin/stack https://github.com/commercialhaskell/stack/releases/download/v2.5.1/stack-2.5.1-linux-x86_64-bin && \
     chmod +x /usr/local/bin/stack
@@ -30,5 +33,3 @@ RUN cd /tmp && \
     ./configure --prefix=/usr/local && \
     make install && \
     rm -rf /tmp/ghc.tar.xz /tmp/ghc-8.10.4-x86_64-unknown-linux
-
-RUN apk add --no-cache bash shadow # for stack --docker
