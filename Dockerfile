@@ -30,3 +30,5 @@ RUN cd /tmp && \
     ./configure --prefix=/usr/local && \
     make install && \
     rm -rf /tmp/ghc.tar.xz /tmp/ghc-8.10.4-x86_64-unknown-linux
+
+RUN apk add --no-cache bash shadow # for stack --docker
