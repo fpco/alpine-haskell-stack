@@ -7,6 +7,7 @@ source code is to keep track of corresponding docker public images in
 
 ## Available images in DockerHub
 
+* [GHC 8.10.6](https://hub.docker.com/layers/fpco/alpine-haskell-stack/8.10.6/images/sha256-51544a80444626eb8c35fc5a6d33c2ad3834a39f30bb13e6337b74d5a0d85cd0?context=explore)
 * [GHC 8.10.4](https://hub.docker.com/layers/fpco/alpine-haskell-stack/8.10.4/images/sha256-ff56997dc0cd1f859a342b6c4b0f069600e21574c9371657817ce8738c8461af?context=repo)
 * [GHC 8.8.3](https://hub.docker.com/layers/fpco/alpine-haskell-stack/gmp-ghc-8.8.3/images/sha256-bf1050a24b0a9d309ec98418e578ddce474dd60542da8f9367f36e4ed6498e8e?context=repo)
 * [GHC 8.6.5](https://hub.docker.com/layers/fpco/alpine-haskell-stack/8.6.5/images/sha256-49e7e15f3b1d3f882ba5bb701463b1d508fbf40e5aafce6ea31acd210da570ba?context=explore)
