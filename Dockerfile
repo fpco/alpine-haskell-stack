@@ -27,9 +27,9 @@ RUN curl -sSLo /usr/local/bin/stack https://github.com/commercialhaskell/stack/r
     chmod +x /usr/local/bin/stack
 
 RUN cd /tmp && \
-    curl -sSLo /tmp/ghc.tar.xz https://downloads.haskell.org/~ghc/8.10.4/ghc-8.10.4-x86_64-alpine3.10-linux-integer-simple.tar.xz && \
+    curl -sSLo /tmp/ghc.tar.xz https://downloads.haskell.org/~ghc/8.10.6/ghc-8.10.6-x86_64-alpine3.10-linux-integer-simple.tar.xz && \
     tar xf ghc.tar.xz && \
-    cd ghc-8.10.4-x86_64-unknown-linux && \
+    cd ghc-8.10.6-x86_64-unknown-linux && \
     ./configure --prefix=/usr/local && \
     make install && \
-    rm -rf /tmp/ghc.tar.xz /tmp/ghc-8.10.4-x86_64-unknown-linux
+    rm -rf /tmp/ghc.tar.xz /tmp/ghc-8.10.6-x86_64-unknown-linux
