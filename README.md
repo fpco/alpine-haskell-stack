@@ -5,6 +5,18 @@ Code mostly taken and updated from Joe Kachmar's
 source code is to keep track of corresponding docker public images in
 [dockerhub](https://hub.docker.com/r/fpco/alpine-haskell-stack).
 
+# Note on Docker image generation
+
+- In this specific case, we are not using the official musl based ghc
+  binaries supplied by `downloads.haskell.org` as it seems to result
+  in segmentation fault error when it was used to try and build the
+  stack codebase.
+- Instead we build musl based GHC using Musl infrastructure of
+  nixpkgs.
+- Note that we have to pass the appropriate `~/.stack/config.yaml`
+  with proper location of include headers and library files to make
+  the build working.
+
 ## Available images in DockerHub
 
 * [GHC 8.10.6](https://hub.docker.com/layers/fpco/alpine-haskell-stack/8.10.6/images/sha256-51544a80444626eb8c35fc5a6d33c2ad3834a39f30bb13e6337b74d5a0d85cd0?context=explore)
