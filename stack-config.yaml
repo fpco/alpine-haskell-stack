@@ -1,0 +1,6 @@
+extra-include-dirs:
+- /usr/include
+extra-lib-dirs:
+- /lib
+- /usr/lib
+- /nix/store/425yi10fqvdhzqpdhgvlf7ykh9422msq-ncurses-6.3/lib

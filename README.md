@@ -6,6 +6,18 @@ projects.
 The images here are used to build the static binary for the Haskell's
 stack build tool.
 
+# Note on Docker image generation
+
+- In this specific case, we are not using the official musl based ghc
+  binaries supplied by `downloads.haskell.org` as it seems to result
+  in segmentation fault error when it was used to try and build the
+  stack codebase.
+- Instead we build musl based GHC using Musl infrastructure of
+  nixpkgs.
+- Note that we have to pass the appropriate `~/.stack/config.yaml`
+  with proper location of include headers and library files to make
+  the build working.
+
 ## Available images in DockerHub
 
 * [GHC 9.2.5](https://hub.docker.com/layers/fpco/alpine-haskell-stack/9.2.5/images/sha256-dc81f5e944403f2d1d5c2e5f974b15a2f244687713beb7e4c73e9dc120a558b5?context=explore)
