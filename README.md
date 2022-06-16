@@ -1,12 +1,15 @@
 # alpine-haskell-stack
 
-Code mostly taken and updated from Joe Kachmar's
-[alpine-haskell-stack](https://github.com/jkachmar/alpine-haskell-stack). This
-source code is to keep track of corresponding docker public images in
-[dockerhub](https://hub.docker.com/r/fpco/alpine-haskell-stack).
+Docker images that are used to build static binary for Haskell
+projects.
+
+The images here are used to build the static binary for the Haskell's
+stack build tool.
 
 ## Available images in DockerHub
 
+* [GHC 9.2.3](https://hub.docker.com/layers/alpine-haskell-stack/fpco/alpine-haskell-stack/9.2.3/images/sha256-a5e554fa11c2d565b30acda5881eeac22e5aee0fb70041614111ab70a01fd658?context=explore)
+* [GHC 9.2.2](https://hub.docker.com/layers/alpine-haskell-stack/fpco/alpine-haskell-stack/9.2.2/images/sha256-edcc6e5d783d3a13cbb863cbb4bf2511b4369bb3efb24825738d1dafdd1760c6?context=explore)
 * [GHC 8.10.6](https://hub.docker.com/layers/fpco/alpine-haskell-stack/8.10.6/images/sha256-51544a80444626eb8c35fc5a6d33c2ad3834a39f30bb13e6337b74d5a0d85cd0?context=explore)
 * [GHC 8.10.4](https://hub.docker.com/layers/fpco/alpine-haskell-stack/8.10.4/images/sha256-ff56997dc0cd1f859a342b6c4b0f069600e21574c9371657817ce8738c8461af?context=repo)
 * [GHC 8.8.3](https://hub.docker.com/layers/fpco/alpine-haskell-stack/gmp-ghc-8.8.3/images/sha256-bf1050a24b0a9d309ec98418e578ddce474dd60542da8f9367f36e4ed6498e8e?context=repo)
