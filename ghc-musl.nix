@@ -1,6 +1,6 @@
 { pkgs ? import (builtins.fetchTarball {
   url =
-    "https://github.com/NixOS/nixpkgs/archive/ce6aa13369b667ac2542593170993504932eb836.tar.gz";
+    "https://github.com/NixOS/nixpkgs/archive/cfb1a6cc8f6348b4e078d18f427fbf36bb75b883.tar.gz";
 }) { } }:
 let
   alpineImage = pkgs.dockerTools.pullImage {
@@ -11,16 +11,15 @@ let
   };
 in pkgs.dockerTools.buildImage {
   name = "psibi/alpine-haskell-stack";
-  tag = "v2";
+  tag = "v3";
 
   fromImage = alpineImage;
 
-  contents = [ pkgs.pkgsMusl.haskell.compiler.ghc922
+  contents = [ pkgs.pkgsMusl.haskell.compiler.ghc923
                pkgs.pkgsMusl.zlib
                pkgs.pkgsMusl.zlib.dev
                pkgs.pkgsMusl.ncurses
              ];
-  # contents = [ pkgs.hello ];
 
   config = { Cmd = [ "/bin/sh" ]; };
 }
