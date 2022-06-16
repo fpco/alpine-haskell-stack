@@ -4,11 +4,11 @@ default:
 
 # Build docker image
 build-image:
-    docker image build . -f Dockerfile -t psibi/alpine-haskell-stack:9.2.2v7
+    docker image build . -f Dockerfile -t fpco/alpine-haskell-stack:9.2.3
 
 # Push image
 push-image:
-    docker push psibi/alpine-haskell-stack:9.2.2v7
+    docker push fpco/alpine-haskell-stack:9.2.3
 
 # Build nix image
 build-nix-image:

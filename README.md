@@ -8,9 +8,9 @@ source code is to keep track of corresponding docker public images in
 # Note on Docker image generation
 
 - In this specific case, we are not using the official musl based ghc
-  binaries supplied by `downloads.haskell.org` as it seems to result
-  in segmentation fault error when it was used to try and build the
-  stack codebase.
+  binaries supplied by `downloads.haskell.org` as it result in
+  segmentation fault error when it was used to try and build the stack
+  codebase.
 - Instead we build musl based GHC using Musl infrastructure of
   nixpkgs.
 - Note that we have to pass the appropriate `~/.stack/config.yaml`

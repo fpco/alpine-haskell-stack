@@ -1,4 +1,4 @@
-FROM psibi/alpine-haskell-stack:v2
+FROM psibi/alpine-haskell-stack:v3
 
 RUN apk upgrade --no-cache &&\
     apk add --no-cache \
