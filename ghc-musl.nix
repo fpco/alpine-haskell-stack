@@ -1,6 +1,6 @@
 { pkgs ? import (builtins.fetchTarball {
   url =
-    "https://github.com/NixOS/nixpkgs/archive/cfb1a6cc8f6348b4e078d18f427fbf36bb75b883.tar.gz";
+    "https://github.com/NixOS/nixpkgs/archive/01ce03efa4c8e8592632501a362de69098e91f4a.tar.gz";
 }) { } }:
 let
   alpineImage = pkgs.dockerTools.pullImage {
@@ -15,7 +15,7 @@ in pkgs.dockerTools.buildImage {
 
   fromImage = alpineImage;
 
-  contents = [ pkgs.pkgsMusl.haskell.compiler.ghc923
+  contents = [ pkgs.pkgsMusl.haskell.compiler.ghc925
                pkgs.pkgsMusl.zlib
                pkgs.pkgsMusl.zlib.dev
                pkgs.pkgsMusl.ncurses

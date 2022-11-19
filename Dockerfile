@@ -26,7 +26,7 @@ RUN apk upgrade --no-cache &&\
         lld \
         shadow # for stack --docker, provides groupadd
 
-RUN curl -sSLo /usr/local/bin/stack https://github.com/commercialhaskell/stack/releases/download/v2.7.5/stack-2.7.5-linux-x86_64-bin && \
+RUN curl -sSLo /usr/local/bin/stack https://github.com/commercialhaskell/stack/releases/download/v2.9.1/stack-2.9.1-linux-x86_64-bin && \
     chmod +x /usr/local/bin/stack
 
 # https://stackoverflow.com/a/41517423
