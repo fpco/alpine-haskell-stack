@@ -8,6 +8,7 @@ stack build tool.
 
 ## Available images in DockerHub
 
+* [GHC 9.2.5](https://hub.docker.com/layers/fpco/alpine-haskell-stack/9.2.5/images/sha256-dc81f5e944403f2d1d5c2e5f974b15a2f244687713beb7e4c73e9dc120a558b5?context=explore)
 * [GHC 9.2.3](https://hub.docker.com/layers/alpine-haskell-stack/fpco/alpine-haskell-stack/9.2.3/images/sha256-a5e554fa11c2d565b30acda5881eeac22e5aee0fb70041614111ab70a01fd658?context=explore)
 * [GHC 9.2.2](https://hub.docker.com/layers/alpine-haskell-stack/fpco/alpine-haskell-stack/9.2.2/images/sha256-edcc6e5d783d3a13cbb863cbb4bf2511b4369bb3efb24825738d1dafdd1760c6?context=explore)
 * [GHC 8.10.6](https://hub.docker.com/layers/fpco/alpine-haskell-stack/8.10.6/images/sha256-51544a80444626eb8c35fc5a6d33c2ad3834a39f30bb13e6337b74d5a0d85cd0?context=explore)
