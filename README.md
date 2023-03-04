@@ -1,5 +1,7 @@
 # alpine-haskell-stack
 
+[![Build](https://github.com/fpco/alpine-haskell-stack/actions/workflows/test.yaml/badge.svg)](https://github.com/fpco/alpine-haskell-stack/actions/workflows/test.yaml)
+
 Docker images that are used to build static binary for Haskell projects.
 
 The images here are used to build the static binary for the Haskell's stack build tool.
