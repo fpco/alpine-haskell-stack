@@ -20,6 +20,11 @@ build-nix-image:
 load-nix-image:
     docker load < result
 
+# Docker login
+docker-login:
+    amber exec -- docker login --username psibi --password $DOCKER_PASSWORD
+
 # Test image
 test-image:
-    docker run --tty --interactive fpco/alpine-haskell-stack:{{GHC_VERSION}} sh
+    docker run --rm --tty fpco/alpine-haskell-stack:{{GHC_VERSION}} ghc --version
+    docker run --rm --tty fpco/alpine-haskell-stack:{{GHC_VERSION}} stack --version
