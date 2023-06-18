@@ -42,5 +42,4 @@ jobs:
         shell: bash
         run: |
           set -exuo pipefail
-          just docker-login
           just push-image
