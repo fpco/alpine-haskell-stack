@@ -37,9 +37,14 @@ jobs:
       - name: Test image
         shell: bash
         run: just test-image
-      - name: Release
+      - name: Push image
         if: startsWith(github.ref, 'refs/tags/')
         shell: bash
         run: |
           set -exuo pipefail
           just push-image
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          generate_release_notes: true

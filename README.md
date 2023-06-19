@@ -18,7 +18,8 @@ The images here are used to build the static binary for the Haskell's stack buil
   with proper location of include headers and library files to make
   the build working.
 
-If you have to update the image for newer GHC, you have to update these things:
+If you have to update the image for newer GHC, you have to update
+these things:
 
 - The nixpkgs commit which has the specific GHC you want. Update the
   [ghc-musl.nix](./ghc-musl.nix) with the appropriate commit.
@@ -27,6 +28,13 @@ If you have to update the image for newer GHC, you have to update these things:
   alpine image as the base image.
 - Update the [justfile](./justfile) with the new GHC tag.
 - Update the stack version in the [Dockerfile](./Dockerfile).
+
+For upgrading the base alpine images, these are the steps:
+
+- Get alpine image's SHA digest from [dockerhub](https://hub.docker.com/_/alpine/) and replace it in
+  ghc-musl.nix's imageDigest.
+- Upgrade the sha256 based on the CI error message or use [skopeo](https://nixos.wiki/wiki/Docker#How_to_calculate_the_sha256_of_a_pulled_image)
+  to calcuate the hash.
 
 # Building images
 
@@ -59,3 +67,6 @@ Version 2.9.3, Git revision 6cf638947a863f49857f9cfbf72a38a48b183e7e x86_64 hpac
 * [GHC 8.10.4](https://hub.docker.com/layers/fpco/alpine-haskell-stack/8.10.4/images/sha256-ff56997dc0cd1f859a342b6c4b0f069600e21574c9371657817ce8738c8461af?context=repo)
 * [GHC 8.8.3](https://hub.docker.com/layers/fpco/alpine-haskell-stack/gmp-ghc-8.8.3/images/sha256-bf1050a24b0a9d309ec98418e578ddce474dd60542da8f9367f36e4ed6498e8e?context=repo)
 * [GHC 8.6.5](https://hub.docker.com/layers/fpco/alpine-haskell-stack/8.6.5/images/sha256-49e7e15f3b1d3f882ba5bb701463b1d508fbf40e5aafce6ea31acd210da570ba?context=explore)
+
+Recent images are built using Github actions and uploaded to [github
+container registry](https://github.com/orgs/fpco/packages?repo_name=alpine-haskell-stack).
