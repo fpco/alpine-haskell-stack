@@ -1,4 +1,4 @@
-GHC_VERSION := "9.2.7"
+GHC_VERSION := `git describe --abbrev=0`
 
 # List all recipies
 default:
