@@ -10,7 +10,7 @@ let
     imageName = "alpine";
     imageDigest =
       "sha256:25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70";
-    sha256 = "82d1e9d7ed48a7523bdebc18cf6290bdb97b82302a8a9c27d4fe885949ea94d1";
+    sha256 = "sha256-ymburWdn08/l5jqTAmdeXbBys0q01OmNuOVG4mnMzqk=";
   };
 in
 pkgs.dockerTools.buildImage {
