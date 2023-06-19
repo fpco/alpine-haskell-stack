@@ -1,7 +1,7 @@
 { pkgs ? import
     (builtins.fetchTarball {
       url =
-        "https://github.com/NixOS/nixpkgs/archive/81d5cb1550ef0a58c5ee529c743065cc93a7fb64.tar.gz";
+        "https://github.com/NixOS/nixpkgs/archive/989a2b93b79dd0553028e83be5f5db7221476d76.tar.gz";
     })
     { }
 }:
@@ -9,8 +9,8 @@ let
   alpineImage = pkgs.dockerTools.pullImage {
     imageName = "alpine";
     imageDigest =
-      "sha256:e2e16842c9b54d985bf1ef9242a313f36b856181f188de21313820e177002501";
-    sha256 = "sha256-YCYpUByIOig4zt/WIvDas3AwHjDYkIQJ6IEKuADJmgg=";
+      "sha256:25fad2a32ad1f6f510e528448ae1ec69a28ef81916a004d3629874104f8a7f70";
+    sha256 = "sha256-ymburWdn08/l5jqTAmdeXbBys0q01OmNuOVG4mnMzqk=";
   };
 in
 pkgs.dockerTools.buildImage {
@@ -20,7 +20,7 @@ pkgs.dockerTools.buildImage {
   fromImage = alpineImage;
 
   contents = [
-    pkgs.pkgsMusl.haskell.compiler.ghc927
+    pkgs.pkgsMusl.haskell.compiler.ghc945
     pkgs.pkgsMusl.zlib
     pkgs.pkgsMusl.zlib.dev
     pkgs.pkgsMusl.ncurses

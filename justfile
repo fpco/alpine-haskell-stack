@@ -1,4 +1,4 @@
-GHC_VERSION := "9.2.7"
+GHC_VERSION := "9.4.5"
 
 # List all recipies
 default:

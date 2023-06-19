@@ -3,6 +3,8 @@ name: Build
 on:
   pull_request:
   push:
+    tags:
+      - '*'
     branches:
       - master
 
@@ -13,8 +15,6 @@ jobs:
     steps:
       - name: Clone project
         uses: actions/checkout@v2
-        with:
-          submodules: "true"
       - uses: extractions/setup-just@v1
         with:
           just-version: 1.8.0
@@ -24,7 +24,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - uses: cachix/install-nix-action@v19
+      - uses: cachix/install-nix-action@v22
         with:
           nix_path: nixpkgs=channel:nixos-unstable
       - name: Build images
@@ -37,9 +37,14 @@ jobs:
       - name: Test image
         shell: bash
         run: just test-image
-      - name: Release
+      - name: Push image
         if: startsWith(github.ref, 'refs/tags/')
         shell: bash
         run: |
           set -exuo pipefail
           just push-image
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          generate_release_notes: true
