@@ -3,6 +3,8 @@ name: Build
 on:
   pull_request:
   push:
+    tags:
+      - '*'
     branches:
       - master
 
@@ -13,8 +15,6 @@ jobs:
     steps:
       - name: Clone project
         uses: actions/checkout@v2
-        with:
-          submodules: "true"
       - uses: extractions/setup-just@v1
         with:
           just-version: 1.8.0

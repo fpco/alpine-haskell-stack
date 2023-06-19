@@ -26,6 +26,7 @@ these things:
 - Optionally, you can update the SHA of the base alpine image in the
   ghc-musl.nix file. It's optional, but good to have latest stable
   alpine image as the base image.
+- Update the [justfile](./justfile) with the new GHC tag.
 - Update the stack version in the [Dockerfile](./Dockerfile).
 - Create a PR to this repository. Once it's merged, create a tag and
   it will push the image to ghcr.io
