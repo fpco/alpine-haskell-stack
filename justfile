@@ -1,5 +1,5 @@
 GHC_VERSION := "9.2.8"
-TAG_VERSION := "v1"
+TAG_VERSION := "v2"
 
 # List all recipies
 default:
@@ -32,7 +32,7 @@ build-ghc-image:
 
 # Push ghc image
 push-ghc-image:
-    docker push ghcr.io/fpco/alpine-haskell-stack:ghc-{{GHC_VERSION}}
+    docker push ghcr.io/fpco/alpine-haskell-stack:ghc-{{GHC_VERSION}}{{TAG_VERSION}}
 
 # Test image
 test-ghc-image:
